@@ -11,23 +11,23 @@ El agente fue configurado en Chatbase para responder consultas administrativas s
 
 ## Tecnologías utilizadas
 
-- **Chatbase:** configuración del agente, instrucciones, fuentes y Help Page.
-- **Vercel:** despliegue y proxy de la Help Page bajo un dominio propio de Vercel.
+- **HTML y CSS:** portada pública de la demostración.
+- **Chatbase:** configuración del agente, instrucciones, chatbot flotante y Help Page.
+- **Vercel:** despliegue del sitio y proxy de la Help Page.
 
 ## Funcionamiento
 
-El archivo `vercel.json` utiliza *rewrites* para mostrar la Help Page de Chatbase desde la ruta `/help` sin cambiar la dirección visible en el navegador.
+La portada contiene el chatbot flotante de Chatbase y un botón que dirige al centro de ayuda en la ruta `/help`.
 
-También reenvía los recursos estáticos y las solicitudes del chat necesarias para que el asistente funcione correctamente.
-
-La ruta `/` redirige temporalmente a `/help` para facilitar el acceso a la demostración.
+El archivo `vercel.json` utiliza *rewrites* para mostrar la Help Page de Chatbase desde esa ruta sin cambiar la dirección visible en el navegador. También reenvía los recursos estáticos y las solicitudes del chat necesarias para que el asistente funcione correctamente.
 
 ## Despliegue
 
 1. Importar este repositorio como un proyecto nuevo en Vercel.
 2. Mantener el directorio raíz y la configuración automática.
 3. Ejecutar **Deploy**.
-4. Abrir la URL generada. La página principal redirigirá a `/help`.
+4. Abrir la URL generada para ver la portada.
+5. Usar el botón **Abrir centro de ayuda** para comprobar la ruta `/help`.
 
 No se necesitan variables de entorno, dependencias ni proceso de compilación.
 
